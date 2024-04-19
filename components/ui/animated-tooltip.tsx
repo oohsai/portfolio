@@ -23,12 +23,12 @@ export const AnimatedTooltip = ({
   // rotate the tooltip
   const rotate = useSpring(
     useTransform(x, [-100, 100], [-45, 45]),
-    springConfig,
+    springConfig
   );
   // translate the tooltip
   const translateX = useSpring(
     useTransform(x, [-100, 100], [-50, 50]),
-    springConfig,
+    springConfig
   );
   const handleMouseMove = (event: any) => {
     const halfWidth = event.target.offsetWidth / 2;
@@ -70,7 +70,6 @@ export const AnimatedTooltip = ({
               <div className="font-bold text-white relative z-30 text-base">
                 {item.name}
               </div>
-              <div className="text-white text-xs">{item.designation}</div>
             </motion.div>
           )}
           <Image
