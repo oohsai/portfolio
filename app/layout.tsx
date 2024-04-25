@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "./_components/Header";
+import Footer from "./_components/Footer";
 
-const dm = Inter({ subsets: ["latin"] });
+const dm = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={dm.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
